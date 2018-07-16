@@ -16,3 +16,18 @@
 @import 'partials/pagination';
 @import 'partials/map';
 @import 'partials/helpers';
+
+// Core variables and mixins
+@import "partials/variables.scss";
+@import "partials/mixins.scss";
+// Global CSS
+@import "partials/global.scss";
+// Components
+@import "partials/navbar.scss";
+@import "partials/masthead.scss";
+@import "partials/services.scss";
+@import "partials/portfolio.scss";
+@import "partials/timeline.scss";
+@import "partials/team.scss";
+@import "partials/contact.scss";
+@import "partials/footer.scss";
