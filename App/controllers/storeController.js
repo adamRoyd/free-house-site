@@ -21,6 +21,11 @@ exports.homePage = (req, res) => {
   res.render('index');
 };
 
+exports.mainPage = (req, res) => {
+    res.render('main');
+  };
+  
+
 exports.addStore = (req, res) => {
   res.render('editStore', { title: 'Add Store' });
 };

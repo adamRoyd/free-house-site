@@ -8,7 +8,7 @@ const mail = require('../handlers/mail');
 exports.login = passport.authenticate('local', {
   failureRedirect: '/login',
   failureFlash: 'Failed Login!',
-  successRedirect: '/',
+  successRedirect: '/main',
   successFlash: 'You are now logged in!'
 });
 
@@ -24,8 +24,8 @@ exports.isLoggedIn = (req, res, next) => {
     next(); // carry on! They are logged in!
     return;
   }
-  req.flash('error', 'Oops you must be logged in to do that!');
-  res.redirect('/login');
+  //req.flash('error', 'Oops you must be logged in to do that!');
+  res.redirect('/');
 };
 
 exports.forgot = async (req, res) => {

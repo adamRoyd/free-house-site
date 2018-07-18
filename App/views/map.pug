@@ -1,10 +1,35 @@
 extends layout
 
 block content
-  .inner
-    h2= title
-    .map
-      .autocomplete
-        input.autocomplete__input(type="text" placeholder="Search for Anything" name="geolocate")
-      #map
-        p Loading Map...
+    .container
+    .intro-text
+        .intro-lead-in Welcome to
+        .intro-heading.text-uppercase Free House LDN
+        a.btn.btn-primary.btn-xl.text-uppercase.js-scroll-trigger(href='#services') Tell Me More
+    .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Services
+            h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        .row.text-center
+          .col-md-4
+            span.fa-stack.fa-4x
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
+            h4.service-heading E-Commerce
+            p.text-muted
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+          .col-md-4
+            span.fa-stack.fa-4x
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-laptop.fa-stack-1x.fa-inverse
+            h4.service-heading Responsive Design
+            p.text-muted
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+          .col-md-4
+            span.fa-stack.fa-4x
+              i.fa.fa-circle.fa-stack-2x.text-primary
+              i.fa.fa-lock.fa-stack-1x.fa-inverse
+            h4.service-heading Web Security
+            p.text-muted
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.

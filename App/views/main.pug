@@ -5,18 +5,21 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     meta(name='description', content='')
     meta(name='author', content='')
-    title Agency - Start Bootstrap Theme
+    title Free House
     // Bootstrap core CSS
-    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(href='dist/vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
     // Custom fonts for this template
-    link(href='vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='dist/vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Helvetica:400,700', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Kaushan+Script', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
     // Custom styles for this template
-    link(href='css/agency.min.css', rel='stylesheet')
-  body#page-top
+    link(rel='stylesheet', href='/dist/style.css')
+    link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+
     // Navigation
     nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
       .container
@@ -40,8 +43,8 @@ html
     header.masthead
       .container
         .intro-text
-          .intro-lead-in Welcome To Our Studio!
-          .intro-heading.text-uppercase It's Nice To Meet You
+          .intro-lead-in Welcome to
+          .intro-heading.text-uppercase Free House LDN
           a.btn.btn-primary.btn-xl.text-uppercase.js-scroll-trigger(href='#services') Tell Me More
     // Services
     section#services
@@ -462,13 +465,20 @@ html
                   button.btn.btn-primary(data-dismiss='modal', type='button')
                     i.fa.fa-times
                     |                     Close Project
-    // Bootstrap core JavaScript
-    script(src='vendor/jquery/jquery.min.js')
-    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
-    // Plugin JavaScript
-    script(src='vendor/jquery-easing/jquery.easing.min.js')
-    // Contact form JavaScript
-    script(src='js/jqBootstrapValidation.js')
-    script(src='js/contact_me.js')
-    // Custom scripts for this template
-    script(src='js/agency.min.js')
+    block messages
+      if locals.flashes
+        .inner.inner--flashes
+          .flash-messages
+            - const categories = Object.keys(locals.flashes)
+            each category in categories
+              each message in flashes[category]
+                .flash(class=`flash--${category}`)
+                  p.flash__text!= message
+                  button.flash__remove(onClick="this.parentElement.remove()") &times;
+    .content
+      block content
+        p This is the default!
+
+    block scripts
+      script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
+      script(src="/dist/App.bundle.js")
