@@ -1,8 +1,12 @@
 mixin loginForm()
   form.form(action="/login" method="POST")
-    h2 Login
+    h2 Welcome
     label(for="email") Email Address
     input(type="email" name="email")
     label(for="password") Password
     input(type="password" name="password")
-    input.button(type="submit" value="Log In →")
+    input.button(type="submit" value="Log In")
+    label(for="submit") 
+      strong Not a member yet?
+    form(action='/register')
+      input.button(type='submit', value='Register here')
