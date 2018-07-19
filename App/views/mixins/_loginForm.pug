@@ -8,5 +8,6 @@ mixin loginForm()
     input.button(type="submit" value="Log In")
     label(for="submit") 
       strong Not a member yet?
-    form(action='/register')
-      input.button(type='submit', value='Register here')
+    a(href='/register')
+      div.registerButton  Register here
+

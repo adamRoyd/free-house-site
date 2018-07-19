@@ -32,6 +32,19 @@
   box-shadow: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%); 
 }
 
+.registerButton{
+  width: 100%;
+  text-align: center;
+  height: 35px;
+  padding-top: 5px;
+  background: #333333;
+  font-family: 'Panama';
+  font-weight: 300;
+  font-size: 17px;
+  color: white;
+}
+
+
   .form h2 {
     margin: 0;
     font-size: 2rem;
@@ -366,12 +379,6 @@ p {
   line-height: 1.75;
 }
 
-a {
-  color: #fed136;
-}
-a:hover {
-  color: #fec503;
-}
 
 .text-primary {
   color: #fed136 !important;
