@@ -21,9 +21,9 @@ html
   body
 
     // Navigation
-    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top.navbar-shrink
       .container
-        a.navbar-brand.js-scroll-trigger(href='#page-top')
+        a.navbar-brand.js-scroll-trigger(href='#page-top') Home
         button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
           | Menu
           i.fa.fa-bars
@@ -479,3 +479,4 @@ html
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
       script(src="/dist/App.bundle.js")
+      script(src="/dist/agency.js")
