@@ -15,7 +15,7 @@ html
     link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
     // Custom styles for this template
-    link(rel='stylesheet', href='/dist/style.css')
+    link(rel='stylesheet', href='/dist/agency.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
@@ -23,7 +23,7 @@ html
     // Navigation
     nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top
       .container
-        a.navbar-brand.js-scroll-trigger(href='#page-top') Start Bootstrap
+        a.navbar-brand.js-scroll-trigger(href='#page-top')
         button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
           | Menu
           i.fa.fa-bars
@@ -476,9 +476,6 @@ html
                   p.flash__text!= message
                   button.flash__remove(onClick="this.parentElement.remove()") &times;
     .content
-      block content
-        p This is the default!
-
     block scripts
       script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
       script(src="/dist/App.bundle.js")

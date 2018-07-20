@@ -38,7 +38,7 @@
   height: 35px;
   padding-top: 5px;
   background: #333333;
-  font-family: 'Panama';
+  font-family: 'Montserrat';
   font-weight: 300;
   font-size: 17px;
   color: white;
@@ -65,7 +65,7 @@
   color: white;
   border: 0;
   background-color: #fed136;
-  font-family: 'Panama';
+  font-family: 'Montserrat';
 }
 #mainNav .navbar-brand {
   color: #fed136;
@@ -80,7 +80,7 @@
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: white;
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   color: #fed136;
@@ -311,24 +311,24 @@ section#contact .form-control:focus {
 section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 section#contact :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 18- */
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 section#contact ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 19+ */
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 
 footer {
@@ -339,14 +339,14 @@ footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 footer ul.quicklinks {
   font-size: 90%;
   line-height: 40px;
   margin-bottom: 0;
   text-transform: none;
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 
 ul.social-buttons {
@@ -391,7 +391,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 
 section {
@@ -417,7 +417,7 @@ section h3.section-subheading {
   }
 }
 .btn {
-  font-family: "Panama";
+  font-family: "Montserrat";
   font-weight: 700;
 }
 
@@ -508,7 +508,7 @@ header.masthead .intro-text .intro-heading {
   font-weight: 200;
   line-height: 50px;
   margin-bottom: 25px;
-  font-family: "Panama";
+  font-family: "Montserrat";
 }
 
 @media (min-width: 768px) {
@@ -528,7 +528,7 @@ header.masthead .intro-text .intro-heading {
     font-weight: w00;
     line-height: 75px;
     margin-bottom: 50px;
-    font-family: "Panama";
+    font-family: "Montserrat";
   }
 }
 
@@ -961,13 +961,6 @@ html {
 body {
   font-size: 1.5rem;
   color: #303030; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 5rem;
-  font-family: 'Panama';
-  font-weight: 600;
-  letter-spacing: -1px; }
-
 a {
   text-decoration: none;
   color: #303030; }
@@ -1607,7 +1600,7 @@ label {
   border: 0;
   background: #333333;
   color: #ffffff;
-  font-family: 'Panama';
+  font-family: 'Montserrat';
   font-weight: 300; 
   font-size: 17px;
 }
