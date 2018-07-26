@@ -1,8 +1,42 @@
-/*!
- * Start Bootstrap - Agency v4.1.1 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
- */
+/* Custom styles here innit */
+
+.urban {
+  width:100%;
+  height:100%;
+  background: url(../img/granite.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.team{
+  width:100%;
+  height:100%;
+  background: url(../img/blue.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.financials{
+  width:100%;
+  height:100%;
+  background: url(../img/abstract.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+
+/* End custom styles */
+
+
  body {
     overflow-x: hidden;
     font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -13,15 +47,15 @@
   }
   
   a {
-    color: #fed136;
+    color: #286012;
   }
   
   a:hover {
-    color: #fec503;
+    color: #286012;
   }
   
   .text-primary {
-    color: #fed136 !important;
+    color: #286012 !important;
   }
   
   h1,
@@ -70,8 +104,8 @@
   }
   
   .btn-primary {
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #286012;
+    border-color: #286012;
   }
   
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
@@ -206,7 +240,7 @@
   @media (min-width: 768px) {
     header.masthead .intro-text {
       padding-top: 300px;
-      padding-bottom: 200px;
+      padding-bottom: 320px;
     }
     header.masthead .intro-text .intro-lead-in {
       font-size: 40px;

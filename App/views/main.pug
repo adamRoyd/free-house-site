@@ -23,64 +23,78 @@ html
     // Navigation
     nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top.navbar-shrink
       .container
-        a.navbar-brand.js-scroll-trigger(href='#page-top') Home
+        //a.navbar-brand.js-scroll-trigger(href='#page-top') Home
         button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
           | Menu
           i.fa.fa-bars
         #navbarResponsive.collapse.navbar-collapse
           ul.navbar-nav.text-uppercase.ml-auto
             li.nav-item
-              a.nav-link.js-scroll-trigger(href='#services') Services
+              a.nav-link.js-scroll-trigger(href='#membership') Membership
             li.nav-item
-              a.nav-link.js-scroll-trigger(href='#portfolio') Portfolio
-            li.nav-item
-              a.nav-link.js-scroll-trigger(href='#about') About
+              a.nav-link.js-scroll-trigger(href='#portfolio') Departments
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#team') Team
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#about') Story so far
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#contact') Contact
     // Header
     header.masthead
       .container
         .intro-text
-          //.intro-lead-in Welcome to
+          .intro-lead-in Welcome to
           .intro-heading Free House London
-          a.btn.btn-primary.btn-xl.text-uppercase.js-scroll-trigger(href='#services') Tell Me More
-    // Services
-    section#services
+    // Urban loneliness
+    section#urbanloneliness.urban
+      .container.granite
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Urban loneliness
+        .row.text-center
+          .col-md-12
+            h4.service-heading Subheading here
+            p
+              | Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+            p 
+              | Greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            p 
+              | Yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale?
+    // Membership
+    section#membership
       .container
         .row
           .col-lg-12.text-center
-            h2.section-heading.text-uppercase Services
+            h2.section-heading.text-uppercase Membership
             h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
         .row.text-center
           .col-md-4
             span.fa-stack.fa-4x
               i.fa.fa-circle.fa-stack-2x.text-primary
-              i.fa.fa-shopping-cart.fa-stack-1x.fa-inverse
-            h4.service-heading E-Commerce
+              i.fa.fa-beer.fa-stack-1x.fa-inverse
+            h4.service-heading New age
             p.text-muted
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
           .col-md-4
             span.fa-stack.fa-4x
               i.fa.fa-circle.fa-stack-2x.text-primary
-              i.fa.fa-laptop.fa-stack-1x.fa-inverse
-            h4.service-heading Responsive Design
+              i.fa.fa-coffee.fa-stack-1x.fa-inverse
+            h4.service-heading Fun
             p.text-muted
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
           .col-md-4
             span.fa-stack.fa-4x
               i.fa.fa-circle.fa-stack-2x.text-primary
-              i.fa.fa-lock.fa-stack-1x.fa-inverse
-            h4.service-heading Web Security
+              i.fa.fa-music.fa-stack-1x.fa-inverse
+            h4.service-heading Vintage feel
             p.text-muted
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-    // Portfolio Grid
+    // Departments
     section#portfolio.bg-light
       .container
         .row
           .col-lg-12.text-center
-            h2.section-heading.text-uppercase Portfolio
+            h2.section-heading.text-uppercase Departments
             h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
         .row
           .col-md-4.col-sm-6.portfolio-item
@@ -137,12 +151,85 @@ html
             .portfolio-caption
               h4 Window
               p.text-muted Photography
+    // Team
+    section#team.team
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Our Amazing Team
+            h3.section-subheading Lorem ipsum dolor sit amet consectetur.
+        .row
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/1.jpg', alt='')
+              h4 Kay Garland
+              p Lead Designer
+              ul.list-inline.social-buttons
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-twitter
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-facebook
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/2.jpg', alt='')
+              h4 Larry Parker
+              p Lead Marketer
+              ul.list-inline.social-buttons
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-twitter
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-facebook
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-linkedin
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/3.jpg', alt='')
+              h4 Diana Pertersen
+              p Lead Developer
+              ul.list-inline.social-buttons
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-twitter
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-facebook
+                li.list-inline-item
+                  a(href='#')
+                    i.fa.fa-linkedin
+        .row
+          .col-lg-8.mx-auto.text-center
+            p.large
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+    //- // Clients
+    //- section.py-5
+    //-   .container
+    //-     .row
+    //-       .col-md-3.col-sm-6
+    //-         a(href='#')
+    //-           img.img-fluid.d-block.mx-auto(src='img/logos/envato.jpg', alt='')
+    //-       .col-md-3.col-sm-6
+    //-         a(href='#')
+    //-           img.img-fluid.d-block.mx-auto(src='img/logos/designmodo.jpg', alt='')
+    //-       .col-md-3.col-sm-6
+    //-         a(href='#')
+    //-           img.img-fluid.d-block.mx-auto(src='img/logos/themeforest.jpg', alt='')
+    //-       .col-md-3.col-sm-6
+    //-         a(href='#')
+    //-           img.img-fluid.d-block.mx-auto(src='img/logos/creative-market.jpg', alt='')
     // About
     section#about
       .container
         .row
           .col-lg-12.text-center
-            h2.section-heading.text-uppercase About
+            h2.section-heading.text-uppercase Our story so far
             h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
         .row
           .col-lg-12
@@ -195,79 +282,21 @@ html
                     | Of Our
                     br
                     | Story!
-    // Team
-    section#team.bg-light
-      .container
+    // Financials
+    section#financials.financials
+      .container.granite
         .row
           .col-lg-12.text-center
-            h2.section-heading.text-uppercase Our Amazing Team
-            h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
-        .row
-          .col-sm-4
-            .team-member
-              img.mx-auto.rounded-circle(src='img/team/1.jpg', alt='')
-              h4 Kay Garland
-              p.text-muted Lead Designer
-              ul.list-inline.social-buttons
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-twitter
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-facebook
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-linkedin
-          .col-sm-4
-            .team-member
-              img.mx-auto.rounded-circle(src='img/team/2.jpg', alt='')
-              h4 Larry Parker
-              p.text-muted Lead Marketer
-              ul.list-inline.social-buttons
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-twitter
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-facebook
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-linkedin
-          .col-sm-4
-            .team-member
-              img.mx-auto.rounded-circle(src='img/team/3.jpg', alt='')
-              h4 Diana Pertersen
-              p.text-muted Lead Developer
-              ul.list-inline.social-buttons
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-twitter
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-facebook
-                li.list-inline-item
-                  a(href='#')
-                    i.fa.fa-linkedin
-        .row
-          .col-lg-8.mx-auto.text-center
-            p.large.text-muted
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
-    // Clients
-    section.py-5
-      .container
-        .row
-          .col-md-3.col-sm-6
-            a(href='#')
-              img.img-fluid.d-block.mx-auto(src='img/logos/envato.jpg', alt='')
-          .col-md-3.col-sm-6
-            a(href='#')
-              img.img-fluid.d-block.mx-auto(src='img/logos/designmodo.jpg', alt='')
-          .col-md-3.col-sm-6
-            a(href='#')
-              img.img-fluid.d-block.mx-auto(src='img/logos/themeforest.jpg', alt='')
-          .col-md-3.col-sm-6
-            a(href='#')
-              img.img-fluid.d-block.mx-auto(src='img/logos/creative-market.jpg', alt='')
+            h2.section-heading.text-uppercase Financials
+        .row.text-center
+          .col-md-12
+            h4.service-heading Subheading here
+            p
+              | Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+            p 
+              | Greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+            p 
+              | Yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale?
     // Contact
     section#contact
       .container
@@ -302,7 +331,7 @@ html
       .container
         .row
           .col-md-4
-            span.copyright Copyright © Your Website 2018
+            span.copyright Copyright © Free House London 2018
           .col-md-4
             ul.list-inline.social-buttons
               li.list-inline-item
