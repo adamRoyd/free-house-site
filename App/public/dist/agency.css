@@ -1,9 +1,25 @@
 /* Custom styles here innit */
 
+@font-face{
+  font-family: TheSunset;
+  src:  url(../fonts/The-Sunset.ttf);
+}
+
 .urban {
   width:100%;
   height:100%;
   background: url(../img/granite.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+.icons {
+  width:100%;
+  height:100%;
+  background: url(../img/deck/Slide1.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -206,7 +222,8 @@
   header.masthead {
     text-align: center;
     color: white;
-    background-image: url("../img/header-bg.jpg");
+    background-image: url("../img/deck/Slide3.jpg");
+    /* box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.6); */
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -223,6 +240,7 @@
   
   header.masthead .intro-text .intro-lead-in {
     font-size: 22px;
+    color: #C33DA7;
     font-style: italic;
     line-height: 22px;
     margin-bottom: 25px;
@@ -234,16 +252,17 @@
     font-weight: 700;
     line-height: 50px;
     margin-bottom: 25px;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'TheSunset', Helvetica, Arial, sans-serif;
   }
   
   @media (min-width: 768px) {
     header.masthead .intro-text {
-      padding-top: 300px;
-      padding-bottom: 320px;
+      height: 840px;
+      /* padding-top: 300px;
+      padding-bottom: 320px; */
     }
     header.masthead .intro-text .intro-lead-in {
-      font-size: 40px;
+      font-size: 21px;
       font-style: italic;
       line-height: 40px;
       margin-bottom: 25px;
@@ -251,10 +270,12 @@
     }
     header.masthead .intro-text .intro-heading {
       font-size: 75px;
-      font-weight: 700;
+      color:black;
+      font-weight: 400;
       line-height: 75px;
-      margin-bottom: 50px;
-      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin-bottom: 60px;
+      margin-top: 350px;
+      font-family: 'TheSunset', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
   }
   
