@@ -14,6 +14,24 @@ html
     link(href='https://fonts.googleapis.com/css?family=Kaushan+Script', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
     link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+    // Favicons
+    link(rel='apple-touch-icon', sizes='57x57', href='img/favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='img/favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='img/favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='img/favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='img/favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='img/favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='img/favicon/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='img/favicon/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='img/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='img/favicon/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='img/favicon/favicon-16x16.png')
+    link(rel='manifest', href='img/favicon/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='img/favicon/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
     // Custom styles for this template
     link(rel='stylesheet', href='/dist/agency.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
@@ -30,6 +48,8 @@ html
         #navbarResponsive.collapse.navbar-collapse
           ul.navbar-nav.text-uppercase.ml-auto
             li.nav-item
+              a.nav-link.js-scroll-trigger(href='#about') About Us
+            li.nav-item
               a.nav-link.js-scroll-trigger(href='#membership') Membership
             li.nav-item
               a.nav-link.js-scroll-trigger(href='#portfolio') Departments
@@ -45,37 +65,54 @@ html
         .intro-text
           .intro-heading Welcome to Free House
           .intro-lead-in The Inclusive Member's Club with The World's First Social Currency
-    // Icons
-    section#icons.icons
+    // About
+    section#about.about
       .container.granite
         .row
           .col-lg-12.text-center
-            h2.section-heading.text-uppercase Urban loneliness
-        .row.text-center
-          .col-md-12
-            h4.service-heading Subheading here
-            p
-              | Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-            p 
-              | Greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
-            p 
-              | Yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale?
-
+            h2.section-heading About Us
+        .row
+            .col-md-6
+                p
+                    | Free House is a rewards-based, inclusive members club with its own currency, a global brand and the first of its kind we are at the centre of three major global movements; Environmental Health, through our carbon free dining, dietary sensitive menus and zero single use plastic. Mental Health through our promotion and building of communities aimed at curing social disconnect. And Distribution of Wealth, through our use of blockchain technology aimed at creating the best value for shareholders and customers alike.
+                p
+                    | The current industry’s most relative offering is in need of reinvigoration and with the demise of the fast casual restaurant brand and the largely untapped and lucrative millennial market, we aim to make the most of the opportunity by expanding rapidly and globally
+                p
+                    | Each Free House venue is recongised for its ethical contribution, style and most of community, able to tailor venues to communities in order to ensure each unit has an instant and loyal customer base. With a prolific team that boasts huge personal brand equity, a wealth of knowledge and proven success at the highest level in one of the most challenging and diverse city's in the world we are at an advantage, able to set the growth curb steep as we challenge the industry's best and become your prescription of much needed community.
+            .col-md-6.text-center
+                p [Logo / Graphic here]
     // Urban loneliness
     section#urbanloneliness.urban
       .container.granite
         .row
-          .col-lg-12.text-center
-            h2.section-heading.text-uppercase Urban loneliness
-        .row.text-center
-          .col-md-12
-            h4.service-heading Subheading here
-            p
-              | Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.
-            p 
-              | Greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
-            p 
-              | Yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale?
+            .col-lg-5.text-center
+                h2.section-heading.text-uppercase THE PROBLEM
+            .col-lg-5.offset-md-2.text-center
+                h2.section-heading.text-uppercase THE SOLUTION
+        .row
+            .col-md-5
+                h4.service-heading.text-center What’s the Name of Your Local?
+                p
+                | The humble 'Local' used to be the heart and soul of a community - a place to have fun with friends, celebrate your successes, share your woes and claim respite from daily stress and strain.
+                p
+                | But in London alone, we have lost 81 local pubs per year since 2001, to date, that's 1,296 community hubs gone in the past 16 years. This is coupled with the loss of community hubs like day centres, libraries, leisure centres and long-standing independent cafes, bars and restaurants.
+                p
+                | Compounding the problem is that we are now so reliant on technology to communicate that we are starting to forget what in-person contact with like-minded people actually feels like. More and more of us are feeling disconnected in our areas of London now our friends are no longer 'around the corner'. We've lost our sense of 'belonging'.
+            .col-md-5.offset-md-2
+                h4.service-heading.text-center Tackling Urban Loneliness
+                p
+                | Free House is a multi-faceted new type of club, a beautiful merging of a traditional country pub and a modern private members club. An 
+                span.highlight inclusive
+                |  concept that removes the pretence and faff that surrounds the worlds current antiquated offering.
+                p
+                | We are 
+                span.highlight reinventing the local
+                |  by fostering a regular through a reward-based membership using our own 
+                span.highlight “LOCALS” tokens
+                |  as the vehicle; a coveted regular is rewarded for their patronage through discounted food and beverage, access to free events such as tastings and fashion shows and preferential bookings; all sent to their digital wallet.
+                p
+                span.highlight
+                    | Your membership card becomes your ticket to a community that urban areas are lacking.
     // Membership
     section#membership
       .container
