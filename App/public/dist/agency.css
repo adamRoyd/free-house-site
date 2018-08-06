@@ -57,6 +57,12 @@
   color: white;
 }
 
+.membership-image{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
 
 /* End custom styles */
 
