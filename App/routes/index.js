@@ -18,6 +18,10 @@ router.post('/add',
   catchErrors(storeController.createStore)
 );
 
+router.post('/download',
+    storeController.download
+);
+
 router.post('/add/:id',
   storeController.upload,
   catchErrors(storeController.resize),

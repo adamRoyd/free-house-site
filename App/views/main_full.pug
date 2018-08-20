@@ -1,0 +1,575 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Free House
+    // Bootstrap core CSS
+    link(href='dist/vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom fonts for this template
+    link(href='dist/vendor/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Helvetica:400,700', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Kaushan+Script', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700', rel='stylesheet', type='text/css')
+    // Favicons
+    link(rel='apple-touch-icon', sizes='57x57', href='img/favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='img/favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='img/favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='img/favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='img/favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='img/favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='img/favicon/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='img/favicon/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='img/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='img/favicon/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='img/favicon/favicon-16x16.png')
+    link(rel='manifest', href='img/favicon/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='img/favicon/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+    // Custom styles for this template
+    link(rel='stylesheet', href='/dist/agency.css')
+    link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+
+    // Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.fixed-top.navbar-shrink
+      .container
+        //a.navbar-brand.js-scroll-trigger(href='#page-top') Home
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          | Menu
+          i.fa.fa-bars
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.text-uppercase.ml-auto
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#about') About Us
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#membership') Membership
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#portfolio') Departments
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#team') Team
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#more') Find out More
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#contact') Contact
+    // Header
+    header.masthead
+      canvas#canv
+      .container
+        img.masthead-badge(src='img/logos/FHBADGEsmall.png', alt='')
+        .intro-text
+          .intro-heading Welcome to Free House
+          .intro-lead-in The Inclusive Member's Club with The World's First Social Currency
+    // About
+    section#about.about
+      .container.granite
+        .row
+          .col-lg-12.text-center
+            h2.section-heading About Us
+        .row
+            .col-md-6
+                p
+                    | Free House is a rewards-based, inclusive members club with its own currency, a global brand and the first of its kind we are at the centre of three major global movements; Environmental Health, through our carbon free dining, dietary sensitive menus and zero single use plastic. Mental Health through our promotion and building of communities aimed at curing social disconnect. And Distribution of Wealth, through our use of blockchain technology aimed at creating the best value for shareholders and customers alike.
+                p
+                    | The current industry’s most relative offering is in need of reinvigoration and with the demise of the fast casual restaurant brand and the largely untapped and lucrative millennial market, we aim to make the most of the opportunity by expanding rapidly and globally
+                p
+                    | Each Free House venue is recongised for its ethical contribution, style and most of community, able to tailor venues to communities in order to ensure each unit has an instant and loyal customer base. With a prolific team that boasts huge personal brand equity, a wealth of knowledge and proven success at the highest level in one of the most challenging and diverse city's in the world we are at an advantage, able to set the growth curb steep as we challenge the industry's best and become your prescription of much needed community.
+            .col-md-6.text-center
+                img(src='img/logos/badges_vertical.png', alt='')
+    // Urban loneliness
+    section#urbanloneliness.urban
+      .container.granite
+        .row
+            .col-lg-5.text-center
+                h2.section-heading.text-uppercase THE PROBLEM
+            .col-lg-5.offset-md-2.text-center
+                h2.section-heading.text-uppercase THE SOLUTION
+        .row
+            .col-md-5
+                h4.service-heading.text-center What’s the Name of Your Local?
+                p
+                | The humble 'Local' used to be the heart and soul of a community - a place to have fun with friends, celebrate your successes, share your woes and claim respite from daily stress and strain.
+                p
+                | But in London alone, we have lost 81 local pubs per year since 2001, to date, that's 1,296 community hubs gone in the past 16 years. This is coupled with the loss of community hubs like day centres, libraries, leisure centres and long-standing independent cafes, bars and restaurants.
+                p
+                | Compounding the problem is that we are now so reliant on technology to communicate that we are starting to forget what in-person contact with like-minded people actually feels like. More and more of us are feeling disconnected in our areas of London now our friends are no longer 'around the corner'. We've lost our sense of 'belonging'.
+            .col-md-5.offset-md-2
+                h4.service-heading.text-center Tackling Urban Loneliness
+                p
+                | Free House is a multi-faceted new type of club, a beautiful merging of a traditional country pub and a modern private members club. An 
+                span.highlight inclusive
+                |  concept that removes the pretence and faff that surrounds the worlds current antiquated offering.
+                p
+                | We are 
+                span.highlight reinventing the local
+                |  by fostering a regular through a reward-based membership using our own 
+                span.highlight “LOCALS” tokens
+                |  as the vehicle; a coveted regular is rewarded for their patronage through discounted food and beverage, access to free events such as tastings and fashion shows and preferential bookings; all sent to their digital wallet.
+                p
+                span.highlight
+                    | Your membership card becomes your ticket to a community that urban areas are lacking.
+    // Membership
+    section#membership
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Membership
+            h3.section-subheading.text-muted We offer four types of membership: Brainiac, Local, Champion and Familiar.
+        .row.text-center
+          .col-md-4
+            img.membership-image.rounded-circle(src='img/farley/Bellini.jpg', alt='')
+            h4.service-heading About
+            p.text-muted
+              | Memberships reward members for using the space, the more they are used the more rewards members get. Each tier allows purchase of special tokens for a digital wallet that increase in value the more often you visit. These tokens offer discounts on food and beverage, access to members events and preferential bookings.
+          .col-md-4
+            img.membership-image.rounded-circle(src='img/farley/lightbulb.jpg', alt='')
+            h4.service-heading Purpose
+            p.text-muted
+              | The membership’s priority is to create and sustain a “regular” that are at the heart of our offering. These patrons generate an atmosphere that non-members will relish, we are purchasing loyalty and nurturing natural ambassadors for each location. Once a membership is unused it is removed and awarded to the next on the waiting list automatically to ensure that core group is maintained at the right number.
+          .col-md-4
+            img.membership-image.rounded-circle(src='img/farley/biscuit_thing.jpg', alt='')
+            h4.service-heading Benefits
+            p.text-muted
+              | Tokens can be used to promote varied initiatives at low cost Membership Cap, provides exclusivity whilst maintaining an inclusive environment Monzo style waiting list adds to the exclusivity Purchasing behaviour analytics enable us to make better business decisions.
+
+    // Departments
+    section#portfolio.departments
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Departments
+            //h3.section-subheading.text-muted Click on a department to find out more
+        .row
+          .col-md-12.col-sm-12.portfolio-item
+            div.department-container
+              img.department-logo(src='img/logos/brain.png', alt='')
+              p.department-text Coalesce
+              p.department-description Co Alesce is our co-working space where your work needs are catered for, enabling members to network, create, graft and code all in a comfortable yet engaging atmosphere. Perch on a hot desk, use the booth for a call, drinking complimentary draught Nitro Brew.
+          .col-md-12.col-sm-12.portfolio-item
+            div.department-container
+              img.department-logo(src='img/logos/kitchen.png', alt='')
+              p.department-text Concept Kitchen
+              p.department-description On the ground floor our Concept Kitchen restaurant caters for all dietary serving a mixture of small, medium and large plates for all styles of dining featuring dishes such as in-house cured Deep Gravadlax, Vegan Gnocchi or a 28-day aged.
+          .col-md-12.col-sm-12.portfolio-item
+            div.department-container
+              img.department-logo(src='img/logos/ecologist.png', alt='')
+              p.department-text One Iota
+              p.department-description One Iota is our molecular cocktail bar serving imaginative concoctions with a matching canape, such as alcoholic candyfloss or a alcho-dipping lolly. Sombre and chilled at the early stages in the evening through to dancing to live music and bands until the early hours.
+          .col-md-12.col-sm-12.portfolio-item
+            div.department-container
+              img.department-logo(src='img/logos/public_space.png', alt='')
+              p.department-text Public Space
+              p.department-description The Public Space event area hosts weekly events such as wine tastings, comedy nights and the bi annual members party to name a few. This space is a typical blank canvas that is flexible to truly personalise private events as well as its list of member and non-member events.
+    // Team
+    section#team.team
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Team
+            h3.team-subheading Mother Brand – HQ
+        .row
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/luke.jpg', alt='')
+              h4 Luke Ramsden
+              p Founder
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/tara.jpg', alt='')
+              h4 Tara Bahia
+              p CTO
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/richard.jpg', alt='')
+              h4 Richard Eversden
+              p Director of Operations
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/reece.jpg', alt='')
+              h4 Reece Williams
+              p NED of Marketing
+        .row
+          .col-lg-12.text-center
+            h3.team-subheading Sub brand partners
+        .row
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/tara.jpg', alt='')
+              h4 Tara Bahia
+              p KPMG
+              p Brain Trust
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/sebastian.jpg', alt='')
+              h4 Sebastian Merry
+              p Magpie
+              p Concept Kitchen
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/andy.jpg', alt='')
+              h4 Andy Mill
+              p The Cocktail Trading Co
+              p The Ecologist
+        .row
+          .col-sm-6
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/richard.jpg', alt='')
+              h4 Richard Eversden
+              p Cura
+              p Public Space
+          .col-sm-6
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/olly.jpg', alt='')
+              h4 Olly Brading
+              p The Cocktail Trading Co
+              p The Ecologist
+        .row
+          .col-lg-12.text-center
+            h3.team-subheading Founding Affiliates
+        .row
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/Dimitris.jpg', alt='')
+              h4 Dimitris Gyftopoulos
+              p Al Zayani
+              p Property Financier
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/simon.jpg', alt='')
+              h4 Simon Bowden
+              p Simon Bowden
+              p Architect and Interior
+          .col-sm-4
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/gaik.jpg', alt='')
+              h4 Sebastian Gaik
+              p Avenue Hospitality
+              p Property &amp; Roll out
+        .row
+          .col-sm-6
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/amieva.jpg', alt='')
+              h4 Sebastian Ameiva
+              p Ameiva Mack
+              p Fundraising
+          .col-sm-6
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/Melissa.jpg', alt='')
+              h4 Melissa Yacoub
+              p Discover Blockchain
+              p ICO Partner
+        .row
+          .col-lg-12.text-center
+            h3.team-subheading Advisory Board
+        .row
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/phil.jpg', alt='')
+              h4 Phil Cameron
+              p No.1 Traveller
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/ben.jpg', alt='')
+              h4 Ben Acheson
+              p Skyline Startups
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/emma.jpg', alt='')
+              h4 Emma Birley
+              p Bacchus PR
+          .col-sm-3
+            .team-member
+              img.mx-auto.rounded-circle(src='img/team/dan.jpg', alt='')
+              h4 Dan Feahney
+              p FinTech Advocate
+    //- // About
+    //- section#about
+    //-   .container
+    //-     .row
+    //-       .col-lg-12.text-center
+    //-         h2.section-heading.text-uppercase Our story so far
+    //-         h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+    //-     .row
+    //-       .col-lg-12
+    //-         ul.timeline
+    //-           li
+    //-             .timeline-image
+    //-               img.rounded-circle.img-fluid(src='img/about/1.jpg', alt='')
+    //-             .timeline-panel
+    //-               .timeline-heading
+    //-                 h4 May 2015
+    //-                 h4.subheading Business Planning
+    //-             //-   .timeline-body
+    //-             //-     p.text-muted
+    //-             //-       | Lorem ipsum dolor
+    //-           li.timeline-inverted
+    //-             .timeline-image
+    //-               img.rounded-circle.img-fluid(src='img/about/2.jpg', alt='')
+    //-             .timeline-panel
+    //-               .timeline-heading
+    //-                 h4 Seed
+    //-                 h4.subheading An Agency is Born
+    //-               .timeline-body
+    //-                 p.text-muted
+    //-                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+    //-           li
+    //-             .timeline-image
+    //-               img.rounded-circle.img-fluid(src='img/about/3.jpg', alt='')
+    //-             .timeline-panel
+    //-               .timeline-heading
+    //-                 h4 December 2012
+    //-                 h4.subheading Transition to Full Service
+    //-               .timeline-body
+    //-                 p.text-muted
+    //-                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+    //-           li.timeline-inverted
+    //-             .timeline-image
+    //-               img.rounded-circle.img-fluid(src='img/about/4.jpg', alt='')
+    //-             .timeline-panel
+    //-               .timeline-heading
+    //-                 h4 July 2014
+    //-                 h4.subheading Phase Two Expansion
+    //-               .timeline-body
+    //-                 p.text-muted
+    //-                   | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+    //-           li.timeline-inverted
+    //-             .timeline-image
+    //-               h4
+    //-                 | Be Part
+    //-                 br
+    //-                 | Of Our
+    //-                 br
+    //-                 | Story!
+    // Find Out More
+    section#more.find-out-more
+      .container.granite
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Find out more
+        .row.text-center
+          .col-md-12
+            p
+              | Download the full proposal presentation for Free House
+            form.form(action="/download" method="POST")
+              input.btn.btn-primary(type="submit" value="Download")
+    // Contact
+    section#contact
+      .container
+        .row
+          .col-lg-12.text-center
+            h2.section-heading.text-uppercase Contact Us
+            h3.section-subheading.text-muted Lorem ipsum dolor sit amet consectetur.
+        .row
+          .col-lg-12
+            form#contactForm(name='sentMessage', novalidate='novalidate')
+              .row
+                .col-md-6
+                  .form-group
+                    input#name.form-control(type='text', placeholder='Your Name *', required='required', data-validation-required-message='Please enter your name.')
+                    p.help-block.text-danger
+                  .form-group
+                    input#email.form-control(type='email', placeholder='Your Email *', required='required', data-validation-required-message='Please enter your email address.')
+                    p.help-block.text-danger
+                  .form-group
+                    input#phone.form-control(type='tel', placeholder='Your Phone *', required='required', data-validation-required-message='Please enter your phone number.')
+                    p.help-block.text-danger
+                .col-md-6
+                  .form-group
+                    textarea#message.form-control(placeholder='Your Message *', required='required', data-validation-required-message='Please enter a message.')
+                    p.help-block.text-danger
+                .clearfix
+                .col-lg-12.text-center
+                  #success
+                  button#sendMessageButton.btn.btn-primary.btn-xl.text-uppercase(type='submit') Send Message
+    // Footer
+    footer
+      .container
+        .row
+          .col-md-4
+            span.copyright Copyright © Free House London 2018
+          .col-md-4
+            ul.list-inline.social-buttons
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-twitter
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-facebook
+              li.list-inline-item
+                a(href='#')
+                  i.fa.fa-linkedin
+          .col-md-4
+            ul.list-inline.quicklinks
+              li.list-inline-item
+                a(href='#') Privacy Policy
+              li.list-inline-item
+                a(href='#') Terms of Use
+    // Portfolio Modals
+    // Modal 1
+    #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  // Project Details Go Here
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='img/portfolio/01-full.jpg', alt='')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-inline
+                    li Date: January 2017
+                    li Client: Threads
+                    li Category: Illustration
+                  button.btn.btn-primary(data-dismiss='modal', type='button')
+                    i.fa.fa-times
+                    |                     Close Project
+    // Modal 2
+    #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  // Project Details Go Here
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='img/portfolio/02-full.jpg', alt='')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-inline
+                    li Date: January 2017
+                    li Client: Explore
+                    li Category: Graphic Design
+                  button.btn.btn-primary(data-dismiss='modal', type='button')
+                    i.fa.fa-times
+                    |                     Close Project
+    // Modal 3
+    #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  // Project Details Go Here
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='img/portfolio/03-full.jpg', alt='')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-inline
+                    li Date: January 2017
+                    li Client: Finish
+                    li Category: Identity
+                  button.btn.btn-primary(data-dismiss='modal', type='button')
+                    i.fa.fa-times
+                    |                     Close Project
+    // Modal 4
+    #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  // Project Details Go Here
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='img/portfolio/04-full.jpg', alt='')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-inline
+                    li Date: January 2017
+                    li Client: Lines
+                    li Category: Branding
+                  button.btn.btn-primary(data-dismiss='modal', type='button')
+                    i.fa.fa-times
+                    |                     Close Project
+    // Modal 5
+    #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  // Project Details Go Here
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='img/portfolio/05-full.jpg', alt='')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-inline
+                    li Date: January 2017
+                    li Client: Southwest
+                    li Category: Website Design
+                  button.btn.btn-primary(data-dismiss='modal', type='button')
+                    i.fa.fa-times
+                    |                     Close Project
+    // Modal 6
+    #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+      .modal-dialog
+        .modal-content
+          .close-modal(data-dismiss='modal')
+            .lr
+              .rl
+          .container
+            .row
+              .col-lg-8.mx-auto
+                .modal-body
+                  // Project Details Go Here
+                  h2.text-uppercase Project Name
+                  p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+                  img.img-fluid.d-block.mx-auto(src='img/portfolio/06-full.jpg', alt='')
+                  p
+                    | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+                  ul.list-inline
+                    li Date: January 2017
+                    li Client: Window
+                    li Category: Photography
+                  button.btn.btn-primary(data-dismiss='modal', type='button')
+                    i.fa.fa-times
+                    |                     Close Project
+    block messages
+      if locals.flashes
+        .inner.inner--flashes
+          .flash-messages
+            - const categories = Object.keys(locals.flashes)
+            each category in categories
+              each message in flashes[category]
+                .flash(class=`flash--${category}`)
+                  p.flash__text!= message
+                  button.flash__remove(onClick="this.parentElement.remove()") &times;
+    .content
+    block scripts
+      script(src=`https://maps.googleapis.com/maps/api/js?key=${process.env.MAP_KEY}&libraries=places`)
+      script(src="/dist/jquery.min.js")
+      script(src="/dist/App.bundle.js")
+      script(src="/dist/agency.js")
+      script(src="/dist/animation.js")

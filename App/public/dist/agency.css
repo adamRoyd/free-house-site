@@ -5,6 +5,51 @@
   src:  url(../fonts/The-Sunset.ttf);
 }
 
+@font-face{
+    font-family: CinzelRegular;
+    src:  url(../fonts/Cinzel-Regular.ttf);
+}
+
+canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;    
+}
+
+.fh-download-button {
+  border-radius: 50%;
+  width: 200px;
+  color: #C33DA7;
+  height: 200px;
+  background: white !important;
+  border: 2px solid #C33DA7;
+  font-family: 'CinzelRegular', Helvetica, Arial, sans-serif;
+}
+
+.fh-download-button:hover {
+  background: #C33DA7 !important;
+  color: white !important;
+}
+
+.about {
+    width:100%;
+    height:100%;
+    background: url(../img/farley/bar.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.7);
+  }
+
+.aboutimage{
+    width: 251px;
+    height: 758px;
+    background: url(../img/icons.png) no-repeat center center; 
+}
+
 .urban {
   width:100%;
   height:100%;
@@ -13,18 +58,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: white;
-}
-
-.icons {
-  width:100%;
-  height:100%;
-  background: url(../img/deck/Slide1.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  color: white;
+  color: black;
+  box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.5);
 }
 
 .team{
@@ -35,25 +70,81 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
   color: white;
 }
 
-.financials{
+.find-out-more{
   width:100%;
   height:100%;
   background: url(../img/abstract.jpg) no-repeat center center fixed; 
+  box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.9);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: white;
 }
+
+.membership-image{
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.departments{
+    width:100%;
+    height:100%;
+    background: url(../img/farley/PDR.JPG) no-repeat center center fixed; 
+    box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.9);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #666;
+}
+
+.department-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.department-logo {
+    width: 140px;
+    height: 140px;
+}
+
+.department-text {
+    color:#666666;
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 10px;
+    font-family: 'CinzelRegular', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.department-description {
+    max-width: 440px;
+}
+
+.team-subheading {
+    color: white;
+    margin-bottom: 40px;
+}
+
 
 
 /* End custom styles */
 
+ html {
+   height: 100%;
+ }
 
  body {
+    height: 100%;
     overflow-x: hidden;
     font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
@@ -81,7 +172,7 @@
   h5,
   h6 {
     font-weight: 700;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'CinzelRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
   section {
@@ -91,7 +182,7 @@
   section h2.section-heading {
     font-size: 40px;
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
   }
   
   section h3.section-subheading {
@@ -105,12 +196,12 @@
   
   @media (min-width: 768px) {
     section {
-      padding: 150px 0;
+      padding: 100px 0;
     }
   }
   
   .btn {
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'CinzelRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
   }
   
@@ -120,13 +211,13 @@
   }
   
   .btn-primary {
-    background-color: #286012;
-    border-color: #286012;
+    background-color: #666666;
+    border-color: #666666;
   }
   
   .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-    background-color: #fec810 !important;
-    border-color: #fec810 !important;
+    background-color: #C33DA7 !important;
+    border-color: #C33DA7 !important;
     color: white;
   }
   
@@ -135,12 +226,12 @@
   }
   
   ::-moz-selection {
-    background: #fed136;
+    background: #C33DA7;
     text-shadow: none;
   }
   
   ::selection {
-    background: #fed136;
+    background: #C33DA7;
     text-shadow: none;
   }
   
@@ -163,12 +254,12 @@
     text-transform: uppercase;
     color: white;
     border: 0;
-    background-color: #fed136;
+    background-color: #C33DA7;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
   #mainNav .navbar-brand {
-    color: #fed136;
+    color: #C33DA7;
     font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
   }
   
@@ -186,7 +277,7 @@
   }
   
   #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fed136;
+    color: #C33DA7;
   }
   
   @media (min-width: 992px) {
@@ -220,10 +311,11 @@
   }
   
   header.masthead {
+    height: calc(100% - 90px);
     text-align: center;
-    color: white;
-    background-image: url("../img/deck/Slide3.jpg");
-    /* box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.6); */
+    color: #666;
+    /* background-image: url("../img/login_background.jpg"); */
+    /* box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.6); */
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -234,11 +326,10 @@
   }
   
   header.masthead .intro-text {
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 10px;
   }
   
-  header.masthead .intro-text .intro-lead-in {
+  header.masthead .intro-text .intro-lead-in, .service-heading  {
     font-size: 22px;
     color: #C33DA7;
     font-style: italic;
@@ -246,21 +337,27 @@
     margin-bottom: 25px;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
+
+  .masthead-badge{
+      margin-top:50px;
+      width:85%;
+  }
+
+  .highlight {
+    color: #C33DA7 !important;
+    font-weight:bold;
+  }
   
   header.masthead .intro-text .intro-heading {
+    color:#666666;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
     margin-bottom: 25px;
-    font-family: 'TheSunset', Helvetica, Arial, sans-serif;
+    font-family: 'CinzelRegular', Helvetica, Arial, sans-serif;
   }
   
   @media (min-width: 768px) {
-    header.masthead .intro-text {
-      height: 840px;
-      /* padding-top: 300px;
-      padding-bottom: 320px; */
-    }
     header.masthead .intro-text .intro-lead-in {
       font-size: 21px;
       font-style: italic;
@@ -270,19 +367,18 @@
     }
     header.masthead .intro-text .intro-heading {
       font-size: 75px;
-      color:black;
+      color:#666666;
       font-weight: 400;
       line-height: 75px;
       margin-bottom: 60px;
-      margin-top: 350px;
-      font-family: 'TheSunset', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'CinzelRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
   }
   
-  .service-heading {
+  /* .service-heading {
     margin: 15px 0;
     text-transform: none;
-  }
+  } */
   
   #portfolio .portfolio-item {
     right: 0;
@@ -509,7 +605,7 @@
     color: white;
     border: 7px solid #e9ecef;
     border-radius: 100%;
-    background-color: #fed136;
+    background-color: #C33DA7;
   }
   
   .timeline > li .timeline-image h4 {
@@ -638,7 +734,7 @@
   .team-member img {
     width: 225px;
     height: 225px;
-    border: 7px solid #fff;
+    border: 3px solid #C33DA7;
   }
   
   .team-member h4 {
@@ -680,7 +776,7 @@
   }
   
   section#contact .form-control:focus {
-    border-color: #fed136;
+    border-color: #C33DA7;
     box-shadow: none;
   }
   
@@ -746,10 +842,10 @@
     color: white;
     border-radius: 100%;
     outline: none;
-    background-color: #212529;
+    background-color: #C33DA7;
   }
   
   ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: #fed136;
+    background-color: #212529;
   }
   
