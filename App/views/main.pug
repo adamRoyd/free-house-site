@@ -48,14 +48,17 @@ html
           .intro-lead-in The Inclusive Member's Club with The World's First Social Currency
           .row.text-center
             .col-md-4
-                form.form(action="/download" method="POST")
-                input.fh-download-button(type="submit" value="download proposal")
+                form.form(action="/downloadFinancials" method="POST")
+                  button.fh-download-button(type="submit")
+                    p download financials
             .col-md-4
-                form.form(action="/download1" method="POST")
-                input.fh-download-button(type="submit" value="download financials")
+                form.form(action="/downloadProposal" method="POST")
+                  button.fh-download-button(type="submit")
+                    p download proposal
             .col-md-4
-                form.form(action="/download2" method="POST")
-                input.fh-download-button(type="submit" value="download valuation")
+                form.form(action="/downloadValuation" method="POST")
+                  button.fh-download-button(type="submit")
+                    p download valuation
     // Footer
     footer
       .container

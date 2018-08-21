@@ -22,6 +22,20 @@ router.post('/download',
     storeController.download
 );
 
+router.post('/downloadProposal',
+    storeController.downloadProposal
+);
+
+router.post('/downloadFinancials',
+    storeController.downloadFinancials
+);
+
+
+router.post('/downloadValuation',
+    storeController.downloadValuation
+);
+
+
 router.post('/add/:id',
   storeController.upload,
   catchErrors(storeController.resize),

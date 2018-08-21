@@ -34,7 +34,21 @@ exports.upload = multer(multerOptions).single('photo');
 
 exports.download = (req, res) => {
     var file = __dirname + '/upload-folder/test.jpg';
-    console.log('download!!');
+    res.download(file);
+}
+
+exports.downloadProposal = (req, res) => {
+    var file = __dirname + '/upload-folder/deck_placeholder.jpg';
+    res.download(file);
+}
+
+exports.downloadValuation = (req, res) => {
+    var file = __dirname + '/upload-folder/Free_House_Valuation_Report.pdf';
+    res.download(file);
+}
+
+exports.downloadFinancials = (req, res) => {
+    var file = __dirname + '/upload-folder/Free_House_Financials.pdf';
     res.download(file);
 }
 
