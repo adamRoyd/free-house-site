@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const User = mongoose.model('User');
 const promisify = require('es6-promisify');
 const crypto = require('crypto');
+const mail = require('../handlers/mail');
 
 exports.landingForm = (req, res) => {
   res.render('landing', { title: 'Welcome' });
@@ -54,6 +55,8 @@ exports.validateCreateUser = (req, res, next) => {
     req.sanitizeBody('usertype');
     req.checkBody('usertype').notEmpty();
 
+    // TODO check if user already exists
+
     const errors = req.validationErrors();
     if (errors) {
       req.flash('error', errors.map(err => err.msg));
@@ -71,6 +74,15 @@ exports.createUser = async (req, res, next) => {
     const placeholderpassword = crypto.randomBytes(20).toString('hex');
     const register = promisify(User.register, User);
     await register(user, placeholderpassword);
+
+    const resetURL = `http://${req.headers.host}/account/reset/${user.resetPasswordToken}`;
+    await mail.send({
+      user,
+      filename: 'new-user',
+      subject: 'Access to free house london',
+      resetURL
+    });
+
     next();
 };
 

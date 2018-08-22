@@ -1,0 +1,8 @@
+extends email-layout
+
+block content
+  p Welcome to free house. To visit the site, please click here.
+  +button(resetURL, 'Reset my Password →')
+  p If you can't click the above button please visit #{resetURL}
+  br
+  p If you didn't request this email, please ignore it.

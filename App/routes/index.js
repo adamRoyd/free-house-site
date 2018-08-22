@@ -27,7 +27,6 @@ router.get('/createuser', authController.isAdmin, userController.createUserForm)
 router.post('/createUser',
     userController.validateCreateUser,
     userController.createUser
-    // send email
     // redirect to create user 
 );
 
