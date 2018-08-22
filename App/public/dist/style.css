@@ -10,6 +10,12 @@
     box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
 }
 
+select.form-control {
+    height: 45px !important;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
 .inner {
   position: relative;
   height: 100%;

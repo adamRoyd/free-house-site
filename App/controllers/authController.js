@@ -28,6 +28,12 @@ exports.isLoggedIn = (req, res, next) => {
   res.redirect('/');
 };
 
+exports.isAdmin = (req, res, next) => {
+    //TODO check if user is admin;
+    next();
+    return;
+}
+
 exports.forgot = async (req, res) => {
   // 1. See if a user with that email exists
   const user = await User.findOne({ email: req.body.email });
