@@ -75,7 +75,7 @@ exports.createUser = async (req, res, next) => {
     const register = promisify(User.register, User);
     await register(user, placeholderpassword);
 
-    const resetURL = `http://${req.headers.host}/account/reset/${user.resetPasswordToken}`;
+    const resetURL = `http://${req.headers.host}/`;
     await mail.send({
       user,
       filename: 'new-user',

@@ -7,7 +7,7 @@ img {
   max-width: 100%; }
 
 body {
-  background-color: #303030;
+  background-color: #ffffff;
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   font-size: 14px;
@@ -57,7 +57,6 @@ table {
 ------------------------------------- */
 .main {
   background: #fff;
-  border-top:20px solid #fff200;
   width: 100%; }
 
 .wrapper {
@@ -84,7 +83,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #000000;
+  color: #666666;
   font-family: sans-serif;
   font-weight: 400;
   line-height: 1.4;
@@ -112,7 +111,7 @@ ol {
     margin-left: 5px; }
 
 a {
-  color: #fff200;
+  color: #C33DA7;
   text-decoration: underline; }
 
 /* -------------------------------------
@@ -131,10 +130,10 @@ a {
     text-align: center; }
   .btn a {
     background-color: #ffffff;
-    border: solid 1px #fff200;
+    border: solid 1px #C33DA7;
     border-radius: 5px;
     box-sizing: border-box;
-    color: #fff200;
+    color: #C33DA7;
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
@@ -145,12 +144,12 @@ a {
     text-transform: capitalize; }
 
 .btn-primary table td {
-  background-color: #fff200; }
+  background-color: #C33DA7; }
 
 .btn-primary a {
-  background-color: #fff200;
-  border-color: #fff200;
-  color: #3a3a3a; }
+  background-color: #C33DA7;
+  border-color: #C33DA7;
+  color: #fff; }
 
 /* -------------------------------------
     OTHER STYLES THAT MIGHT BE USEFUL
