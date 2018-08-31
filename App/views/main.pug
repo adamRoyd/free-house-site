@@ -47,18 +47,26 @@ html
           .intro-heading free house
           .intro-lead-in The Inclusive Member's Club with The World's First Social Currency
           .row.text-center
-            .col-md-4
+            .col-md-3
                 form.form(action="/downloadFinancials" method="POST")
                   button.fh-download-button(type="submit")
-                    p download financials
-            .col-md-4
+                    p Financials
+                    i.fa.fa-arrow-down
+            .col-md-3
                 form.form(action="/downloadProposal" method="POST")
                   button.fh-download-button(type="submit")
-                    p download proposal
-            .col-md-4
+                    p Proposal
+                    i.fa.fa-arrow-down
+            .col-md-3
                 form.form(action="/downloadValuation" method="POST")
                   button.fh-download-button(type="submit")
-                    p download valuation
+                    p Valuation
+                    i.fa.fa-arrow-down
+            .col-md-3
+                form.form(action="/downloadProperty" method="POST")
+                  button.fh-download-button(type="submit")
+                    p Property
+                    i.fa.fa-arrow-down
     // Footer
     footer
       .container
@@ -68,16 +76,16 @@ html
           .col-md-4
             ul.list-inline.social-buttons
               li.list-inline-item
-                a(href='#')
+                a(href='https://twitter.com/FreeHouse')
                   i.fa.fa-twitter
               li.list-inline-item
-                a(href='#')
+                a(href='https://www.facebook.com/free.house')
                   i.fa.fa-facebook
               li.list-inline-item
-                a(href='#')
+                a(href='https://www.instagram.com/FreeHouse/')
                   i.fa.fa-instagram
               li.list-inline-item
-                a(href='#')
+                a(href='https://www.linkedin.com/FreeHouse')
                   i.fa.fa-linkedin
           .col-md-4
             ul.list-inline.quicklinks

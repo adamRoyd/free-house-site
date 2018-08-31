@@ -57,4 +57,8 @@ router.post('/downloadValuation',
     storeController.downloadValuation
 );
 
+router.post('/downloadProperty',
+    storeController.downloadProperty
+);
+
 module.exports = router;

@@ -52,6 +52,11 @@ exports.downloadFinancials = (req, res) => {
     res.download(file);
 }
 
+exports.downloadProperty = (req, res) => {
+    var file = __dirname + '/upload-folder/Free_House_Financials.pdf';
+    res.download(file);
+}
+
 exports.resize = async (req, res, next) => {
     // check if there is no new file to resize
     if (!req.file) {
