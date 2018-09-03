@@ -13,6 +13,8 @@ router.post('/login', authController.login);
 
 router.get('/register', userController.registerForm);
 
+router.get('/special/:token', userController.registerSpecial);
+
 // 1. Validate the registration data
 // 2. register the user
 // 3. we need to log them in
@@ -27,7 +29,6 @@ router.get('/createuser', authController.isAdmin, userController.createUserForm)
 router.post('/createUser',
     userController.validateCreateUser,
     userController.createUser
-    // redirect to create user 
 );
 
 router.get('/logout', authController.logout);

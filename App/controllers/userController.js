@@ -42,7 +42,7 @@ exports.validateRegister = (req, res, next) => {
   next(); // there were no errors!
 };
 
-exports.validateCreateUser = (req, res, next) => {
+exports.validateCreateUser = async (req, res, next) => {
     req.sanitizeBody('name');
     req.checkBody('name', 'You must supply a name!').notEmpty();
     req.checkBody('email', 'That Email is not valid!').isEmail();
@@ -55,7 +55,11 @@ exports.validateCreateUser = (req, res, next) => {
     req.sanitizeBody('usertype');
     req.checkBody('usertype').notEmpty();
 
-    // TODO check if user already exists
+    const user = await User.findOne({ email: req.body.email });
+    if(user) {
+      req.flash('error', 'User already exists');
+      res.render('createuser', { title: 'Create User', body: req.body, flashes: req.flash() });
+    }
 
     const errors = req.validationErrors();
     if (errors) {
@@ -70,28 +74,35 @@ exports.validateCreateUser = (req, res, next) => {
 };
 
 exports.createUser = async (req, res, next) => {
-    const user = new User({ email: req.body.email, name: req.body.name, usertype: req.body.usertype });
+  const token = crypto.randomBytes(20).toString('hex');
+    const user = new User({ email: req.body.email, name: req.body.name, usertype: req.body.usertype, token: token });
     const placeholderpassword = crypto.randomBytes(20).toString('hex');
     const register = promisify(User.register, User);
     await register(user, placeholderpassword);
 
-    const resetURL = `http://${req.headers.host}/`;
+    const resetURL = `http://${req.headers.host}/special/${token}`;
     await mail.send({
       user,
       filename: 'new-user',
       subject: 'Access to free house london',
       resetURL
     });
-
-    next();
+    
+    req.flash('success', 'User created! 👋');
+    //req.flash('success', 'User created! 👋');
+    res.render('createuser', { title: 'Create User', body: req.body, flashes: req.flash() });
+    //res.redirect('/createUser');
 };
 
 exports.register = async (req, res, next) => {
+  //TODO check if user already exists
   const user = new User({ email: req.body.email, name: req.body.name, usertype: 1 });
   const register = promisify(User.register, User);
   await register(user, req.body.password);
   next(); // pass to authController.login
 };
+
+
 
 exports.account = (req, res) => {
   res.render('account', { title: 'Edit Your Account' });
@@ -111,3 +122,14 @@ exports.updateAccount = async (req, res) => {
   req.flash('success', 'Updated the profile!');
   res.redirect('back');
 };
+
+exports.registerSpecial = async (req, res, next) => {
+  const user = await User.findOne({ token: req.params.token });
+
+  if (!user) {
+    req.flash('error', 'User is invalid or has expired');
+    return res.redirect('/login');
+  }
+  // if there is a user, show the set password form
+  res.render('setpasswordspecial');
+}
