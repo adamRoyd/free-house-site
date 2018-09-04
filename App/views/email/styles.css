@@ -178,6 +178,11 @@ a {
 .mb0 {
   margin-bottom: 0; }
 
+.check-box {
+  width: 25px;
+  height: 25px;
+}
+
 .preheader {
   color: transparent;
   display: none;

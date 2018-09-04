@@ -29,7 +29,11 @@ exports.isLoggedIn = (req, res, next) => {
 };
 
 exports.isAdmin = (req, res, next) => {
-    //TODO check if user is admin;
+    
+    if(!req.user.isAdmin){
+      res.redirect('/main');
+    }
+
     next();
     return;
 }

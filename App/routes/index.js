@@ -27,7 +27,10 @@ router.post('/register',
   authController.login
 );
 
-router.get('/createuser', authController.isAdmin, userController.createUserForm)
+router.get('/createuser', 
+    authController.isLoggedIn,
+    authController.isAdmin, 
+    userController.createUserForm)
 
 router.post('/createUser',
     userController.validateCreateUser,

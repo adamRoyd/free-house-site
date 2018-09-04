@@ -831,6 +831,27 @@ textarea {
   margin: 0;
   /* 2 */ }
 
+
+  .check-box {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 0px;
+  }
+
+label {
+  display: inline-block !important;
+  margin-right: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.flex{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 15px;
+}
+  
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
