@@ -14,6 +14,9 @@ router.post('/login', authController.login);
 router.get('/register', userController.registerForm);
 
 router.get('/special/:token', userController.registerSpecial);
+router.post('/special/:token', userController.specialUserTermsCheck, storeController.mainPage);
+
+router.get('/elite/:token', userController.checkEliteUser, storeController.mainPage);
 
 // 1. Validate the registration data
 // 2. register the user

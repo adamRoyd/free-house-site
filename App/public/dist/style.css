@@ -38,6 +38,53 @@ select.form-control {
   box-shadow: linear-gradient(90deg, #48ded4 0%, #a026bf 20%, #e82c75 60%, #FFC40E 85%, #48ded4 95%); 
 }
 
+.termscheck{
+    display: flex;
+    width:120px;
+}
+
+.styled-checkbox {
+    position: absolute;
+    opacity: 0;
+}
+.styled-checkbox + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+.styled-checkbox + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 2px solid black;
+}
+.styled-checkbox:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.styled-checkbox:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+}
+.styled-checkbox:disabled + label:before {
+    box-shadow: none;
+    background: #ddd;
+}
+.styled-checkbox:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    background: black;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 black, 4px 0 black, 4px -2px black, 4px -4px black, 4px -6px black, 4px -8px black, 4px -10px black;
+    transform: rotate(38deg);
+}
+
 .registerButton{
   width: 100%;
   text-align: center;

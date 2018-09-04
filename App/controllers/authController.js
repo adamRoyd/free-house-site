@@ -98,5 +98,5 @@ exports.update = async (req, res) => {
   const updatedUser = await user.save();
   await req.login(updatedUser);
   //req.flash('success', '💃 Nice! Your password has been reset! You are now logged in!');
-  res.redirect('/');
+  res.redirect('/main');
 };
