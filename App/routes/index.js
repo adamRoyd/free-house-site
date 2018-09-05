@@ -18,6 +18,8 @@ router.post('/special/:token', userController.specialUserTermsCheck, storeContro
 
 router.get('/elite/:token', userController.checkEliteUser, storeController.mainPage);
 
+router.get('/nda', userController.nda);
+
 // 1. Validate the registration data
 // 2. register the user
 // 3. we need to log them in

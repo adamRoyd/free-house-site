@@ -20,6 +20,10 @@ exports.createUserForm = (req, res) => {
     res.render('createUser', { title: 'Create User' });
 }
 
+exports.nda = (req, res) => {
+    res.render('nda', { title: 'Nondisclosure Agreement'});
+}
+
 exports.validateRegister = (req, res, next) => {
     req.sanitizeBody('name');
     req.checkBody('name', 'You must supply a name!').notEmpty();
