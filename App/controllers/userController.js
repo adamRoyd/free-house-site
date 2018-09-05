@@ -21,7 +21,7 @@ exports.createUserForm = (req, res) => {
 }
 
 exports.nda = (req, res) => {
-    res.render('nda', { title: 'Nondisclosure Agreement'});
+    res.render('nda', { title: 'Nondisclosure Agreement' });
 }
 
 exports.validateRegister = (req, res, next) => {
@@ -36,10 +36,10 @@ exports.validateRegister = (req, res, next) => {
     req.checkBody('password', 'Password Cannot be Blank!').notEmpty();
     req.checkBody('password-confirm', 'Confirmed Password cannot be blank!').notEmpty();
     req.checkBody('password-confirm', 'Oops! Your passwords do not match').equals(req.body.password);
-    
-    req.body.terms ? 
-        true : 
-        req.checkBody('terms-and-conditions', 'You must accept the terms and conditions').notEmpty();
+
+    req.body.terms ?
+        true :
+        req.checkBody('terms-and-conditions', 'You must accept the nondisclosure agreement').notEmpty();
 
     const errors = req.validationErrors();
     if (errors) {
@@ -49,6 +49,22 @@ exports.validateRegister = (req, res, next) => {
     }
     next(); // there were no errors!
 };
+
+exports.register = async (req, res, next) => {
+
+    const existingUser = await User.findOne({ email: req.body.email });
+    if (existingUser) {
+        req.flash('error', 'User with that already exists. Try logging on instead.');
+        res.render('login', { title: 'Login', flashes: req.flash() });
+        return;
+    }
+
+    const user = new User({ email: req.body.email, name: req.body.name, usertype: 1, isAdmin: false, nondisclosureAgreementAccepted: true, dateAccepted: Date.now() });
+    const register = promisify(User.register, User);
+    await register(user, req.body.password);
+    next();
+};
+
 
 exports.validateCreateUser = async (req, res, next) => {
     req.sanitizeBody('name');
@@ -83,7 +99,7 @@ exports.validateCreateUser = async (req, res, next) => {
 
 exports.createUser = async (req, res, next) => {
     const token = crypto.randomBytes(20).toString('hex');
-    const user = new User({ email: req.body.email, name: req.body.name, usertype: req.body.usertype, token: token, isAdmin: false });
+    const user = new User({ email: req.body.email, name: req.body.name, usertype: req.body.usertype, token: token, isAdmin: false, nondisclosureAgreementAccepted: false });
     const placeholderpassword = crypto.randomBytes(20).toString('hex');
     const register = promisify(User.register, User);
     await register(user, placeholderpassword);
@@ -104,20 +120,6 @@ exports.createUser = async (req, res, next) => {
     //res.redirect('/createUser');
 };
 
-exports.register = async (req, res, next) => {
-
-    const existingUser = await User.findOne({ email: req.body.email });
-    if (existingUser) {
-        req.flash('error', 'User with that already exists. Try logging on instead.');
-        res.render('login', {title: 'Login', flashes: req.flash() });
-        return;
-    }
-
-    const user = new User({ email: req.body.email, name: req.body.name, usertype: 1, isAdmin: false });
-    const register = promisify(User.register, User);
-    await register(user, req.body.password);
-    next();
-};
 
 exports.account = (req, res) => {
     res.render('account', { title: 'Edit Your Account' });
@@ -150,8 +152,18 @@ exports.registerSpecial = async (req, res, next) => {
 }
 
 exports.specialUserTermsCheck = (req, res, next) => {
-    // TODO check that the Terms and NDA have been agreed to.
-    next();
+    req.body.terms ?
+        true :
+        req.checkBody('terms-and-conditions', 'You must accept the nondisclosure agreement').notEmpty();
+
+    const errors = req.validationErrors();
+    if (errors) {
+        req.flash('error', errors.map(err => err.msg));
+        res.render('setpasswordspecial', { title: 'Welcome', body: req.body, flashes: req.flash() });
+        return; // stop the fn from running
+    }
+
+    next(); // there were no errors!
 }
 
 exports.checkEliteUser = async (req, res, next) => {
@@ -162,6 +174,21 @@ exports.checkEliteUser = async (req, res, next) => {
         return res.redirect('/login');
     }
     // if there is a user, automatically log them in
+    next();
+}
+
+exports.ndaAccepted = async (req, res, next) => {
+
+    await User.update(
+        { token: req.params.token },
+        {
+            $set: {
+                nondisclosureAgreementAccepted: true,
+                dateAccepted: Date.now()
+            },
+        }
+    );
+
     next();
 }
 

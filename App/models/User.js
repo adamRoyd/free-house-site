@@ -25,7 +25,9 @@ const userSchema = new Schema({
   },
   token: String,
   resetPasswordExpires: Date,
-  isAdmin: Boolean
+  isAdmin: Boolean,
+  nondisclosureAgreementAccepted: Boolean,
+  dateAccepted: Date
 });
 
 userSchema.virtual('gravatar').get(function() {
