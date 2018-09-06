@@ -99,6 +99,7 @@ h1 {
 p,
 ul,
 ol {
+  color: #666666;
   font-family: sans-serif;
   font-size: 14px;
   font-weight: normal;
