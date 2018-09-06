@@ -82,13 +82,13 @@ exports.validateCreateUser = async (req, res, next) => {
     const user = await User.findOne({ email: req.body.email });
     if (user) {
         req.flash('error', 'User already exists');
-        res.render('createuser', { title: 'Create User', body: req.body, flashes: req.flash() });
+        res.render('createUser', { title: 'Create User', body: req.body, flashes: req.flash() });
     }
 
     const errors = req.validationErrors();
     if (errors) {
         req.flash('error', errors.map(err => err.msg));
-        res.render('createuser', { title: 'Create User', body: req.body, flashes: req.flash() });
+        res.render('createUser', { title: 'Create User', body: req.body, flashes: req.flash() });
         return; // stop the fn from running
     }
 
@@ -116,7 +116,7 @@ exports.createUser = async (req, res, next) => {
 
     req.flash('success', 'User created! 👋');
     //req.flash('success', 'User created! 👋');
-    res.render('createuser', { title: 'Create User', body: req.body, flashes: req.flash() });
+    res.render('createUser', { title: 'Create User', body: req.body, flashes: req.flash() });
     //res.redirect('/createUser');
 };
 
