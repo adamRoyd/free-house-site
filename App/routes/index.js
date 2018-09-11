@@ -24,6 +24,8 @@ router.get('/elite/:token',
     storeController.mainPage);
 
 router.get('/nda', userController.nda);
+router.get('/privacypolicy', userController.privacyPolicy);
+router.get('/termsandconditions', userController.termsAndConditions);
 
 // 1. Validate the registration data
 // 2. register the user

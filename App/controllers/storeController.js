@@ -38,22 +38,22 @@ exports.download = (req, res) => {
 }
 
 exports.downloadProposal = (req, res) => {
-    var file = __dirname + '/upload-folder/deck_placeholder.jpg';
+    var file = __dirname + '/upload-folder/Free_House_Business_Proposal.pdf';
     res.download(file);
 }
 
 exports.downloadValuation = (req, res) => {
-    var file = __dirname + '/upload-folder/Free_House_Valuation_Report.pdf';
+    var file = __dirname + '/upload-folder/Free_House_Valuation_Model.pdf';
     res.download(file);
 }
 
 exports.downloadFinancials = (req, res) => {
-    var file = __dirname + '/upload-folder/Free_House_Financials.pdf';
+    var file = __dirname + '/upload-folder/Free_House_Financial_Projections.pdf';
     res.download(file);
 }
 
 exports.downloadProperty = (req, res) => {
-    var file = __dirname + '/upload-folder/Free_House_Financials.pdf';
+    var file = __dirname + '/upload-folder/Free_House_Current_Property.pdf';
     res.download(file);
 }
 

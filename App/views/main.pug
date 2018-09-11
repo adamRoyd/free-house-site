@@ -47,24 +47,24 @@ html
           .intro-lead-in The Inclusive Member's Club with The World's First Social Currency
           .row.text-center
             .col-md-3
-                form.form(action="/downloadFinancials" method="POST")
-                  button.fh-download-button(type="submit")
-                    p Financials
-                    i.fa.fa-arrow-down
-            .col-md-3
                 form.form(action="/downloadProposal" method="POST")
                   button.fh-download-button(type="submit")
-                    p Proposal
+                    p business proposal
                     i.fa.fa-arrow-down
             .col-md-3
                 form.form(action="/downloadValuation" method="POST")
                   button.fh-download-button(type="submit")
-                    p Valuation
+                    p valuation model
+                    i.fa.fa-arrow-down
+            .col-md-3
+                form.form(action="/downloadFinancials" method="POST")
+                  button.fh-download-button(type="submit")
+                    p financial projections
                     i.fa.fa-arrow-down
             .col-md-3
                 form.form(action="/downloadProperty" method="POST")
                   button.fh-download-button(type="submit")
-                    p Property
+                    p current property
                     i.fa.fa-arrow-down
     // Footer
     footer
@@ -75,23 +75,23 @@ html
           .col-md-4
             ul.list-inline.social-buttons
               li.list-inline-item
-                a(href='https://twitter.com/FreeHouse')
+                a(href='https://twitter.com/FreeHouseLDN' target='_blank')
                   i.fa.fa-twitter
               li.list-inline-item
-                a(href='https://www.facebook.com/free.house')
+                a(href='https://www.facebook.com/FreeHouseLDN' target='_blank')
                   i.fa.fa-facebook
               li.list-inline-item
-                a(href='https://www.instagram.com/FreeHouse/')
+                a(href='https://www.instagram.com/FreeHouseLDN' target='_blank')
                   i.fa.fa-instagram
               li.list-inline-item
-                a(href='https://www.linkedin.com/FreeHouse')
+                a(href='https://www.linkedin.com/Free-House-LDN' target='_blank')
                   i.fa.fa-linkedin
           .col-md-4
             ul.list-inline.quicklinks
               li.list-inline-item
-                a(href='#') Privacy Policy
+                a(target="privacypolicy" href='/privacypolicy') Privacy Policy
               li.list-inline-item
-                a(href='#') Terms of Use
+                a(target="termsandconditions" href='/termsandconditions') Terms of Use
     block scripts
       script(src="/dist/jquery.min.js")
       script(src="/dist/App.bundle.js")

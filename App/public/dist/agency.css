@@ -20,13 +20,13 @@ canvas {
 .fh-download-button {
     border-radius: 50%;
     width: 120px;
-    padding-top: 13px;
+    padding-top: 23px;
     color: #666;
     height: 120px;
     background: white !important;
     border: 2px solid #C33DA7;
     font-family: 'CinzelRegular', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -34,6 +34,10 @@ canvas {
 .fh-download-button:hover {
     background: #C33DA7 !important;
     color: white !important;
+}
+
+.fh-download-button p {
+    margin-bottom: 9px;
 }
 
 .about {
@@ -156,11 +160,11 @@ p {
 }
 
 a {
-    color: #286012;
+    color: #C33DA7;
 }
 
 a:hover {
-    color: #286012;
+    color: #666666;
 }
 
 .text-primary {
@@ -277,7 +281,23 @@ img::-moz-selection {
     color: #C33DA7;
 }
 
+
+header.masthead {
+    height: unset;
+    text-align: center;
+    color: #666;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 @media (min-width: 992px) {
+    
     #mainNav {
         padding-top: 25px;
         padding-bottom: 25px;
@@ -305,21 +325,6 @@ img::-moz-selection {
         font-size: 1.25em;
         padding: 12px 0;
     }
-}
-
-header.masthead {
-    height: calc(100% - 90px);
-    text-align: center;
-    color: #666;
-    /* background-image: url("../img/login_background.jpg"); */
-    /* box-shadow:inset 0 0 0 2000px rgba(255,255,255,0.6); */
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 header.masthead .intro-text {
@@ -453,6 +458,7 @@ header.masthead .intro-text .intro-heading {
         margin: 0 0 30px;
     }
 }
+
 
 .portfolio-modal {
     padding-right: 0px !important;
@@ -648,6 +654,19 @@ header.masthead .intro-text .intro-heading {
 }
 
 @media (min-width: 768px) {
+    header.masthead {
+        height: calc(100% - 90px);
+        text-align: center;
+        color: #666;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
     .timeline:before {
         left: 50%;
     }

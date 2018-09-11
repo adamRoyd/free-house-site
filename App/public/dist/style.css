@@ -839,6 +839,10 @@ b, strong {
     font-weight: bolder;
 }
 
+li {
+    font-size: 1.6rem;
+}
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.

@@ -24,6 +24,13 @@ exports.nda = (req, res) => {
     res.render('nda', { title: 'Nondisclosure Agreement' });
 }
 
+exports.privacyPolicy = (req, res) => {
+    res.render('gdpr', { title: 'Privacy Policy' });
+}
+
+exports.termsAndConditions = (req, res) => {
+    res.render('termsandconditions', { title: 'Terms and Conditions' });
+}
 exports.validateRegister = (req, res, next) => {
     req.sanitizeBody('name');
     req.checkBody('name', 'You must supply a name!').notEmpty();
@@ -112,6 +119,8 @@ exports.createUser = async (req, res, next) => {
         filename: 'new-user',
         subject: 'Access to free house london',
         resetURL
+    }).catch(function(err) {
+        console.info('error: ', err);
     });
 
     req.flash('success', 'User created! 👋');
