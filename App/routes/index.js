@@ -3,36 +3,29 @@ const router = express.Router();
 const storeController = require('../controllers/storeController');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
-const reviewController = require('../controllers/reviewController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
 router.get('/', userController.loginForm);
 router.get('/main', authController.isLoggedIn, storeController.mainPage);
-router.get('/stores', catchErrors(storeController.getStores));
-router.get('/stores/page/:page', catchErrors(storeController.getStores));
-router.get('/add', authController.isLoggedIn, storeController.addStore);
-
-router.post('/add',
-  storeController.upload,
-  catchErrors(storeController.resize),
-  catchErrors(storeController.createStore)
-);
-
-router.post('/add/:id',
-  storeController.upload,
-  catchErrors(storeController.resize),
-  catchErrors(storeController.updateStore)
-);
-
-router.get('/stores/:id/edit', catchErrors(storeController.editStore));
-router.get('/store/:slug', catchErrors(storeController.getStoreBySlug));
-
-router.get('/tags', catchErrors(storeController.getStoresByTag));
-router.get('/tags/:tag', catchErrors(storeController.getStoresByTag));
 
 router.get('/login', userController.loginForm);
 router.post('/login', authController.login);
+
 router.get('/register', userController.registerForm);
+
+router.get('/special/:token', userController.registerSpecial);
+router.post('/special/:token', 
+    userController.specialUserTermsCheck, 
+    userController.ndaAccepted,
+    storeController.mainPage);
+
+router.get('/elite/:token', 
+    userController.checkEliteUser, 
+    storeController.mainPage);
+
+router.get('/nda', userController.nda);
+router.get('/privacypolicy', userController.privacyPolicy);
+router.get('/termsandconditions', userController.termsAndConditions);
 
 // 1. Validate the registration data
 // 2. register the user
@@ -41,6 +34,16 @@ router.post('/register',
   userController.validateRegister,
   userController.register,
   authController.login
+);
+
+router.get('/createuser', 
+    authController.isLoggedIn,
+    authController.isAdmin, 
+    userController.createUserForm)
+
+router.post('/createUser',
+    userController.validateCreateUser,
+    userController.createUser
 );
 
 router.get('/logout', authController.logout);
@@ -53,21 +56,25 @@ router.post('/account/reset/:token',
   authController.confirmedPasswords,
   catchErrors(authController.update)
 );
-router.get('/map', storeController.mapPage);
-router.get('/hearts', authController.isLoggedIn, catchErrors(storeController.getHearts));
-router.post('/reviews/:id',
-  authController.isLoggedIn,
-  catchErrors(reviewController.addReview)
+
+router.post('/download',
+    storeController.download
 );
 
-router.get('/top', catchErrors(storeController.getTopStores));
+router.post('/downloadProposal',
+    storeController.downloadProposal
+);
 
-/*
-  API
-*/
+router.post('/downloadFinancials',
+    storeController.downloadFinancials
+);
 
-router.get('/api/search', catchErrors(storeController.searchStores));
-router.get('/api/stores/near', catchErrors(storeController.mapStores));
-router.post('/api/stores/:id/heart', catchErrors(storeController.heartStore));
+router.post('/downloadValuation',
+    storeController.downloadValuation
+);
+
+router.post('/downloadProperty',
+    storeController.downloadProperty
+);
 
 module.exports = router;

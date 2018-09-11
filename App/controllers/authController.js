@@ -28,6 +28,16 @@ exports.isLoggedIn = (req, res, next) => {
   res.redirect('/');
 };
 
+exports.isAdmin = (req, res, next) => {
+    
+    if(!req.user.isAdmin){
+      res.redirect('/main');
+    }
+
+    next();
+    return;
+}
+
 exports.forgot = async (req, res) => {
   // 1. See if a user with that email exists
   const user = await User.findOne({ email: req.body.email });
@@ -40,7 +50,7 @@ exports.forgot = async (req, res) => {
   user.resetPasswordExpires = Date.now() + 3600000; // 1 hour from now
   await user.save();
   // 3. Send them an email with the token
-  const resetURL = `http://${req.headers.host}/account/reset/${user.resetPasswordToken}`;
+  const resetURL = `https://www.FreeHouseLDN.com/account/reset/${user.resetPasswordToken}`;
   await mail.send({
     user,
     filename: 'password-reset',
@@ -91,6 +101,6 @@ exports.update = async (req, res) => {
   user.resetPasswordExpires = undefined;
   const updatedUser = await user.save();
   await req.login(updatedUser);
-  req.flash('success', '💃 Nice! Your password has been reset! You are now logged in!');
-  res.redirect('/');
+  //req.flash('success', '💃 Nice! Your password has been reset! You are now logged in!');
+  res.redirect('/main');
 };
