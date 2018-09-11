@@ -113,7 +113,7 @@ exports.createUser = async (req, res, next) => {
 
     const userType = req.body.usertype === 2 ? 'special' : 'elite'
 
-    const resetURL = `http://${req.headers.host}/${userType}/${token}`;
+    const resetURL = `https://www.FreeHouseLDN.com/${userType}/${token}`;
     await mail.send({
         user,
         filename: 'new-user',

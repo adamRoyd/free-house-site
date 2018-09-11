@@ -36,10 +36,6 @@ canvas {
     color: white !important;
 }
 
-.fh-download-button p {
-    margin-bottom: 9px;
-}
-
 .about {
     width: 100%;
     height: 100%;
@@ -653,7 +649,20 @@ header.masthead .intro-text .intro-heading {
     margin-bottom: 0;
 }
 
+.fh-download-button p {
+    text-align: center !important;
+    margin-bottom: 9px;
+    font-size: 12px;
+}
+
+
 @media (min-width: 768px) {
+.fh-download-button p {
+    text-align: center !important;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
     header.masthead {
         height: calc(100% - 90px);
         text-align: center;
@@ -699,6 +708,11 @@ header.masthead .intro-text .intro-heading {
 }
 
 @media (min-width: 992px) {
+.fh-download-button p {
+    text-align: center !important;
+    margin-bottom: 9px;
+}
+
     .timeline>li {
         min-height: 150px;
     }
