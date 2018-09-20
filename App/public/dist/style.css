@@ -1,3 +1,23 @@
+.contact-form{
+    height: 540px
+}
+
+.contact-form-textarea {
+    height: 320px;
+}
+
+.contact-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+    width: 95%;
+    overflow-y: scroll;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+}
+
 .content {
     width: 100%;
     height: 100%;
@@ -49,6 +69,8 @@ ol {
     background: rgba(255, 255, 255, 0.8);
     padding: 2rem;
 }
+
+
 
 .termscheck {
     display: flex;
@@ -316,6 +338,18 @@ ol {
 }
 
 @media (min-width: 768px) {
+    .contact-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 50%;
+        width: 50%;
+        overflow-y: scroll;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 2rem;
+    }
+    
     .form {
         position: absolute;
         top: 50%;

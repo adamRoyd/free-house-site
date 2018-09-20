@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .inner
+    form.form.contact-form(action='/contact' method='POST')
+        h1 Contact us
+        textarea.contact-form-textarea(name="bodyText" placeholder="Enter your message here...")
+        input.button(type="submit" value="Send message")
+        a(href='/main')
+         div.registerButton  Back to site

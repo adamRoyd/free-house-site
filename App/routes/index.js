@@ -24,6 +24,8 @@ router.get('/elite/:token',
     storeController.mainPage);
 
 router.get('/nda', userController.nda);
+router.get('/contact', userController.contact);
+router.post('/contact', userController.sendMessage);
 router.get('/privacypolicy', userController.privacyPolicy);
 router.get('/termsandconditions', userController.termsAndConditions);
 

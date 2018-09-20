@@ -28,6 +28,26 @@ exports.privacyPolicy = (req, res) => {
     res.render('gdpr', { title: 'Privacy Policy' });
 }
 
+exports.contact = (req, res) => {
+    res.render('contact', { title: 'Contact' });
+}
+
+exports.sendMessage = async (req, res) => {
+    var user = req.user;
+    var message = req.body.bodyText.replace(/\n/g, "<br />");
+    await mail.sendEnquiry({
+        user,
+        message,
+        filename: 'enquiry',
+        subject: 'Free house london enquiry',        
+    }).catch(function(err) {
+        console.info('error: ', err);
+    });
+
+    req.flash('success', 'Message sent');
+    res.render('contact', { title: 'Main', body: req.body, flashes: req.flash() });
+}
+
 exports.termsAndConditions = (req, res) => {
     res.render('termsandconditions', { title: 'Terms and Conditions' });
 }
@@ -108,8 +128,6 @@ exports.createUser = async (req, res, next) => {
     const token = crypto.randomBytes(20).toString('hex');
     const user = new User({ email: req.body.email, name: req.body.name, usertype: req.body.usertype, token: token, isAdmin: false, nondisclosureAgreementAccepted: false });
     const placeholderpassword = crypto.randomBytes(20).toString('hex');
-    const register = promisify(User.register, User);
-    await register(user, placeholderpassword);
 
     const userType = req.body.usertype === 2 ? 'special' : 'elite'
 
@@ -121,12 +139,18 @@ exports.createUser = async (req, res, next) => {
         resetURL
     }).catch(function(err) {
         console.info('error: ', err);
+        req.flash('error', 'Email failed to send. Please contact Adam to fix.');
+        res.render('createUser', { title: 'Create User', body: req.body, flashes: req.flash() });
+        return;
     });
 
+    const register = promisify(User.register, User);
+    await register(user, placeholderpassword);
+
     req.flash('success', 'User created! 👋');
-    //req.flash('success', 'User created! 👋');
+
     res.render('createUser', { title: 'Create User', body: req.body, flashes: req.flash() });
-    //res.redirect('/createUser');
+
 };
 
 
