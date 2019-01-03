@@ -63,6 +63,11 @@ router.post('/download',
     storeController.download
 );
 
+router.post('/downloadQuick',
+    storeController.downloadQuick
+);
+
+
 router.post('/downloadProposal',
     storeController.downloadProposal
 );

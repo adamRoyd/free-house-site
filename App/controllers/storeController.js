@@ -38,7 +38,12 @@ exports.download = (req, res) => {
 }
 
 exports.downloadProposal = (req, res) => {
-    var file = __dirname + '/upload-folder/Free_House_Business_Proposal.pdf';
+    var file = __dirname + '/upload-folder/Free_House_Full_Deck.pdf';
+    res.download(file);
+}
+
+exports.downloadQuick = (req, res) => {
+    var file = __dirname + '/upload-folder/Free_House_Quick_Deck.pdf';
     res.download(file);
 }
 

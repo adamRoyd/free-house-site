@@ -46,25 +46,33 @@ html
           .intro-heading free house
           .intro-lead-in The Inclusive Member's Club with The World's First Social Currency
           .row.text-center
-            .col-md-3
+            .col-md-2.offset-md-1
+                form.form(action="/downloadProperty" method="POST")
+                  button.fh-download-button(type="submit")
+                    p current property
+                    i.fa.fa-arrow-down
+            .col-md-2
+                form.form(action="/downloadQuick" method="POST")
+                  button.fh-download-button(type="submit")
+                    p quick 
+                      | deck
+                    i.fa.fa-arrow-down
+            .col-md-2
                 form.form(action="/downloadProposal" method="POST")
                   button.fh-download-button(type="submit")
-                    p business proposal
+                    p
+                      | full
+                      | deck
                     i.fa.fa-arrow-down
-            .col-md-3
+            .col-md-2
                 form.form(action="/downloadValuation" method="POST")
                   button.fh-download-button(type="submit")
                     p valuation model
                     i.fa.fa-arrow-down
-            .col-md-3
+            .col-md-2
                 form.form(action="/downloadFinancials" method="POST")
                   button.fh-download-button(type="submit")
                     p financial projections
-                    i.fa.fa-arrow-down
-            .col-md-3
-                form.form(action="/downloadProperty" method="POST")
-                  button.fh-download-button(type="submit")
-                    p current property
                     i.fa.fa-arrow-down
     // Footer
     footer
